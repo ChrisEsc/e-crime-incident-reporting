@@ -1,0 +1,32 @@
+
+<markers>
+	<marker id="1" name="Murder" details="Someone is murdered here, help!" lat="11.742658" lng="38.493189" type="murder"/>
+	<marker id="2" name="Kidnapping" details="I saw a girl kidnapped here!" lat="11.899592" lng="37.920862" type="kidnapping"/>
+	<marker id="3" name="Carnapping" details="This is where I parked my car." lat="11.601401" lng="37.405145" type="carnapping"/>
+	<marker id="4" name="Burglary" details="Most of our appliances are gone!" lat="11.850662" lng="38.008894" type="burglary"/>
+	<marker id="5" name="Robbery" details="Someone robbed me while i was walking on the street!" lat="11.318566" lng="39.247698" type="robbery"/>
+	<marker id="6" name="Rape" details="Help! My uncle raped my sister!" lat="10.422874" lng="39.246607" type="rape"/>
+	<marker id="7" name="Homicide" details="My drunk friend hit a man on the road while driving" lat="10.434595" lng="38.186828" type="homicide"/>
+	<marker id="8" name="Arson" details="My house was burned down by my neighbor!" lat="10.867589" lng="36.880682" type="arson"/>
+	<marker id="9" name="Theft" details="I saw a thief stole the wallet of a person" lat="11.855646" lng="39.554702" type="theft"/>
+	<marker id="10" name="Nuisance Complaint" details="Very noisy neighbors" lat="12.054336" lng="38.964993" type="nuisance"/>
+	<marker id="11" name="Lost Property" details="My bike is missing!" lat="13.359990" lng="37.969094" type="lostproperty"/>
+</markers>
+
+
+<!--
+<markers>
+	<marker id="1" name="Rape" details="J. Rivera St
+Cagayan de Oro, Misamis Oriental," lat="8.482375" lng="124.649000" type="rape"/>
+	<marker id="2" name="Murder" details="Lorem ipsum" lat="8.482106" lng="124.654418" type="murder"/>
+	<marker id="3" name="Kidnapping" details="This is where the car was parked" lat="8.485132" lng="124.650146" type="kidnapping"/>
+	<marker id="4" name="Carnapping" details="The car carnapped was stationed here" lat="8.486259" lng="124.650702" type="carnapping"/>
+	<marker id="5" name="Homicide" details="My friend was accidentally killed by his brother" lat="8.485564" lng="124.648020" type="homicide"/>
+	<marker id="6" name="Arson" details="Our neighbors house was burned" lat="8.483322" lng="124.660576" type="arson"/>
+	<marker id="7" name="Burglary" details="Gisudlan ang convenience store sa shell" lat="8.484341" lng="124.658834" type="burglary"/>
+	<marker id="8" name="Nuisance" details="Grabe ka saba among silingan" lat="8.485730" lng="124.659941" type="nuisance"/>
+	<marker id="9" name="Lost Property" details="Giilog sa GRO akong uyab" lat="8.484812" lng="124.654727" type="lostproperty"/>
+	<marker id="10" name="Theft" details="Gikawat akong pitaka" lat="8.481837" lng="124.648569" type="theft"/>
+	<marker id="11" name="Robbery" details="Gibira akong mahalon nga bag, tabang!" lat="8.478569" lng="124.654051" type="robbery"/>
+</markers>
+-->
