@@ -16,7 +16,6 @@
 				</ul>
 			</div>
 		</div>
-
 		<div class="main-panel">
 			<nav class="navbar navbar-default navbar-fixed">
 				<div class="container-fluid">
@@ -45,27 +44,19 @@
 			</nav>
 			<div id="map"></div>
 		</div>
-	</div>
-
-	
+	</div>	
 </body>
-
-	<script src="<?php echo base_url(); ?>assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-    <!--  Charts Plugin -->
-    <script src="<?php echo base_url(); ?>assets/js/chartist.min.js"></script>
-
-    <!--  Notifications Plugin    -->
-    <script src="<?php echo base_url(); ?>assets/js/bootstrap-notify.js"></script>
-
-    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="assets/js/light-bootstrap-dashboard.js"></script>
-
-	<script type="text/javascript"> 
-        <?php include_once("dashboard_functions.js"); ?>
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZxSOt3SpqiSw4SyQu9IwGmBmleBG62DM&callback=initMap" async defer>
-  	</script>
-
+<script src="<?php echo base_url(); ?>assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
+<!--  Charts Plugin -->
+<script src="<?php echo base_url(); ?>assets/js/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="<?php echo base_url(); ?>assets/js/bootstrap-notify.js"></script>
+<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+<script src="assets/js/light-bootstrap-dashboard.js"></script>
+<script type="text/javascript"> 
+	<?php include_once("dashboard_functions.js"); ?>
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('GOOGLE_MAPS_API_KEY');?>&callback=initMap" async defer>
+</script>
 </html>

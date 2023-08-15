@@ -19,7 +19,6 @@ var customLabel = {
 
 function setMarkers(data) {
   var object = data.response;
-  //console.log(object);
   object.data.forEach(function(dataItem) {
     var id = dataItem.id;
     var name = dataItem.name;
@@ -133,7 +132,6 @@ var fadeInMarkers = function(markers) {
 document.getElementById("navbardropdown").addEventListener("click", function(e) {
   // e.target is the clicked element
   if(e.target && e.target.nodeName == "A") {
-    console.log(e.target.id);
     prioritycode = e.target.id;
     priorityname = e.target.textContent + '<span><b class="caret"></b></span>';
     document.getElementById("navbarpriorityname").innerHTML = priorityname;
@@ -166,7 +164,6 @@ sidebarpriorityname.addEventListener("click", function(e) {
   else{
     prioritycode = prioritycode.split(' ').join('-');
   }
-  console.log(prioritycode);
   reloadMarkers();
 });
 
@@ -197,5 +194,4 @@ function sidebareventlistener(e) {
     prioritycode = prioritycode.split(' ').join('-');
     reloadMarkers();
   }
-  console.log(prioritycode);
 }

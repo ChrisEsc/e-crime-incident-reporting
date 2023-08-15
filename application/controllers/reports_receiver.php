@@ -1,20 +1,17 @@
 <?php 
 if(!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Reports_Receiver extends CI_Controller{
-
+class Reports_Receiver extends CI_Controller {
 	public function index() {
 		$this->load->helper('common_helper');
 		$this->load->view('reports_receiver/index');
 	}	
 
-	public function receivereports() 
-	{
+	public function receivereports() {
 		$this->load->helper(array('form'));
 		$this->load->library('form_validation');
 
-		try
-		{
+		try {
         	$this->form_validation->set_rules('name', 'Name', 'required');
         	$this->form_validation->set_rules('details', 'Details', 'required');
         	$this->form_validation->set_rules('lat', 'Latitude', 'required');
@@ -25,14 +22,12 @@ class Reports_Receiver extends CI_Controller{
         	$lat 			= $this->input->post("lat");
         	$lng 			= $this->input->post("lng");
 
-			if ($this->form_validation->run() == TRUE)
-	        {
+			if ($this->form_validation->run() == TRUE) {
 	        	$commandText = "SELECT * FROM crimes WHERE name = '$name'";
 				$result = $this->db->query($commandText);
 				$query_result = $result->result();
 
-				if(count($query_result)==1)
-				{
+				if(count($query_result)==1) {
 					$crime_id = $query_result[0]->id;
 				}
 
@@ -48,15 +43,13 @@ class Reports_Receiver extends CI_Controller{
 				$data['success'] = true;
 				$data['data'] = "Successfully Reported";
 	        }
-	        else
-	        {
+	        else {
 	            $data = array('success' => false, 'data' => preg_replace("/[\n\r]/",".",strip_tags(validation_errors())));
 	        }
 
 			die(json_encode($data));
 		}
-		catch(Exception $e)
-		{
+		catch(Exception $e) {
 			$data = array("success"=> false, "data"=>$e->getMessage());
 			die(json_encode($data));
 		}

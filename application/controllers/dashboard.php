@@ -1,17 +1,15 @@
 <?php 
 if(!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller{
-
+class Dashboard extends CI_Controller {
 	public function index() {
 		$this->load->helper('common_helper');
 		$this->load->view('dashboard/index');
 	}	
 
-	public function generatecrimelist() 
-	{
+	public function generatecrimelist() {
 		$query = $this->uri->segment('3');
-		if($query == 'priority-code-all'){
+		if($query == 'priority-code-all') {
 			$query = 'priority-code';
 		}
 		$query = str_replace('-', ' ', $query);
@@ -45,8 +43,8 @@ class Dashboard extends CI_Controller{
 					'type' 			=> $value->type
 				);
 			}
-			die(json_encode($data));
 
+			die(json_encode($data));
 		}
 		catch (Exception $e) {
 			print $e->getMessage();
@@ -54,10 +52,8 @@ class Dashboard extends CI_Controller{
 		}
 	}
 
-	public function receivereports() 
-	{
-		try
-		{
+	public function receivereports() {
+		try {
 			$name			= mysql_real_escape_string(strip_tags(trim($_GET['name'])));
 			$details 		= mysql_real_escape_string(strip_tags(trim($_GET['details'])));
 			$lat 			= mysql_real_escape_string(strip_tags(trim($_GET['lat'])));
@@ -67,8 +63,7 @@ class Dashboard extends CI_Controller{
 			$result = $this->db->query($commandText);
 			$query_result = $result->result();
 
-			if(count($query_result)==1)
-			{
+			if(count($query_result)==1) {
 				$crime_id = $query_result[0]->id;
 			}
 
@@ -84,10 +79,8 @@ class Dashboard extends CI_Controller{
 			$data['success'] = true;
 			$data['data'] = "Successfully Reported";
 			die(json_encode($data));
-
 		}
-		catch(Exception $e)
-		{
+		catch(Exception $e) {
 			$data = array("success"=> false, "data"=>$e->getMessage());
 			die(json_encode($data));
 		}
